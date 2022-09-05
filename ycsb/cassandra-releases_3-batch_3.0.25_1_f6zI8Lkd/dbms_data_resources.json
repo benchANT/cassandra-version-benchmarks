@@ -1,0 +1,889 @@
+{
+  "changed": true,
+  "msg": "All items completed",
+  "skipped": false,
+  "data_results": [
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-0cdb609af3c900c8e"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2021-08-06T08:28:30+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-04d9f18531eae55f5"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "879f967deb594a7f81aaa80b6d21c7c6",
+          "cpu_options": {
+            "core_count": 1,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_id": "i-0cdb609af3c900c8e",
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_time": "2021-08-06T08:28:29+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-34-244-117-4.eu-west-1.compute.amazonaws.com",
+                "public_ip": "34.244.117.4"
+              },
+              "attachment": {
+                "attach_time": "2021-08-06T08:28:29+00:00",
+                "attachment_id": "eni-attach-0f0f52e736ecc9670",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-07cc8221414036714",
+                  "group_name": "baas-ssh"
+                },
+                {
+                  "group_id": "sg-1976d965",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-0995e8ca815a40bc4",
+                  "group_name": "baas-dbms"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "0a:b4:2e:49:48:97",
+              "network_interface_id": "eni-0ed18b71b44370599",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-47-249.eu-west-1.compute.internal",
+              "private_ip_address": "172.31.47.249",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-34-244-117-4.eu-west-1.compute.amazonaws.com",
+                    "public_ip": "34.244.117.4"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-47-249.eu-west-1.compute.internal",
+                  "private_ip_address": "172.31.47.249"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-eeeb21b4",
+              "vpc_id": "vpc-45c79523"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-west-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "private_dns_name": "ip-172-31-47-249.eu-west-1.compute.internal",
+          "private_ip_address": "172.31.47.249",
+          "product_codes": [],
+          "public_dns_name": "ec2-34-244-117-4.eu-west-1.compute.amazonaws.com",
+          "public_ip_address": "34.244.117.4",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-07cc8221414036714",
+              "group_name": "baas-ssh"
+            },
+            {
+              "group_id": "sg-1976d965",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-0995e8ca815a40bc4",
+              "group_name": "baas-dbms"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-eeeb21b4",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-45c79523"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "benchantkey",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-0298c9e0d2c86b0ed"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "name": "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-west-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "present",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 100,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 0,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 100,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "879f967deb594a7f81aaa80b6d21c7c6",
+        "ImageId": "ami-0298c9e0d2c86b0ed",
+        "InstanceType": "m5.large",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-07cc8221414036714",
+              "sg-0995e8ca815a40bc4",
+              "sg-1976d965"
+            ],
+            "SubnetId": "subnet-eeeb21b4"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-0-7a6ebc0b-591a-5916-a4c3-f24e09c82333"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-0c3480584d6ad17f6"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2021-08-06T08:31:52+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-0e7ca0e7d4310c372"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "c1e3dae81d974677b1ae504ded45971a",
+          "cpu_options": {
+            "core_count": 1,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_id": "i-0c3480584d6ad17f6",
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_time": "2021-08-06T08:31:51+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-3-250-109-53.eu-west-1.compute.amazonaws.com",
+                "public_ip": "3.250.109.53"
+              },
+              "attachment": {
+                "attach_time": "2021-08-06T08:31:51+00:00",
+                "attachment_id": "eni-attach-07fb5c3d27a2adf67",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-07cc8221414036714",
+                  "group_name": "baas-ssh"
+                },
+                {
+                  "group_id": "sg-1976d965",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-0995e8ca815a40bc4",
+                  "group_name": "baas-dbms"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "0a:bc:1f:e1:e3:07",
+              "network_interface_id": "eni-0739c372a751e3996",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-40-105.eu-west-1.compute.internal",
+              "private_ip_address": "172.31.40.105",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-3-250-109-53.eu-west-1.compute.amazonaws.com",
+                    "public_ip": "3.250.109.53"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-40-105.eu-west-1.compute.internal",
+                  "private_ip_address": "172.31.40.105"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-eeeb21b4",
+              "vpc_id": "vpc-45c79523"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-west-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "private_dns_name": "ip-172-31-40-105.eu-west-1.compute.internal",
+          "private_ip_address": "172.31.40.105",
+          "product_codes": [],
+          "public_dns_name": "ec2-3-250-109-53.eu-west-1.compute.amazonaws.com",
+          "public_ip_address": "3.250.109.53",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-07cc8221414036714",
+              "group_name": "baas-ssh"
+            },
+            {
+              "group_id": "sg-1976d965",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-0995e8ca815a40bc4",
+              "group_name": "baas-dbms"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-eeeb21b4",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-45c79523"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "benchantkey",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-0298c9e0d2c86b0ed"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "name": "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-west-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "present",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 100,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 1,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 100,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "c1e3dae81d974677b1ae504ded45971a",
+        "ImageId": "ami-0298c9e0d2c86b0ed",
+        "InstanceType": "m5.large",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-07cc8221414036714",
+              "sg-0995e8ca815a40bc4",
+              "sg-1976d965"
+            ],
+            "SubnetId": "subnet-eeeb21b4"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-1-d3f27516-5529-57c5-bb1e-42d378e07102"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "ansible_loop_var": "item",
+      "changed": true,
+      "failed": false,
+      "instance_ids": [
+        "i-0067e9575a9b854b1"
+      ],
+      "instances": [
+        {
+          "ami_launch_index": 0,
+          "architecture": "x86_64",
+          "block_device_mappings": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "attach_time": "2021-08-06T08:34:59+00:00",
+                "delete_on_termination": true,
+                "status": "attached",
+                "volume_id": "vol-0bf12e66033c62c7a"
+              }
+            }
+          ],
+          "capacity_reservation_specification": {
+            "capacity_reservation_preference": "open"
+          },
+          "client_token": "2ca2f600e8864a5982d73ebc3fd4e40e",
+          "cpu_options": {
+            "core_count": 1,
+            "threads_per_core": 2
+          },
+          "ebs_optimized": false,
+          "ena_support": true,
+          "enclave_options": {
+            "enabled": false
+          },
+          "hibernation_options": {
+            "configured": false
+          },
+          "hypervisor": "xen",
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_id": "i-0067e9575a9b854b1",
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_time": "2021-08-06T08:34:58+00:00",
+          "metadata_options": {
+            "http_endpoint": "enabled",
+            "http_put_response_hop_limit": 1,
+            "http_tokens": "optional",
+            "state": "applied"
+          },
+          "monitoring": {
+            "state": "disabled"
+          },
+          "network_interfaces": [
+            {
+              "association": {
+                "ip_owner_id": "amazon",
+                "public_dns_name": "ec2-54-75-111-121.eu-west-1.compute.amazonaws.com",
+                "public_ip": "54.75.111.121"
+              },
+              "attachment": {
+                "attach_time": "2021-08-06T08:34:58+00:00",
+                "attachment_id": "eni-attach-081867d691d0dfba2",
+                "delete_on_termination": true,
+                "device_index": 0,
+                "network_card_index": 0,
+                "status": "attached"
+              },
+              "description": "",
+              "groups": [
+                {
+                  "group_id": "sg-07cc8221414036714",
+                  "group_name": "baas-ssh"
+                },
+                {
+                  "group_id": "sg-1976d965",
+                  "group_name": "default"
+                },
+                {
+                  "group_id": "sg-0995e8ca815a40bc4",
+                  "group_name": "baas-dbms"
+                }
+              ],
+              "interface_type": "interface",
+              "ipv6_addresses": [],
+              "mac_address": "0a:bb:9d:3e:0c:f3",
+              "network_interface_id": "eni-0b8d75db22f832ae7",
+              "owner_id": "584241909684",
+              "private_dns_name": "ip-172-31-42-134.eu-west-1.compute.internal",
+              "private_ip_address": "172.31.42.134",
+              "private_ip_addresses": [
+                {
+                  "association": {
+                    "ip_owner_id": "amazon",
+                    "public_dns_name": "ec2-54-75-111-121.eu-west-1.compute.amazonaws.com",
+                    "public_ip": "54.75.111.121"
+                  },
+                  "primary": true,
+                  "private_dns_name": "ip-172-31-42-134.eu-west-1.compute.internal",
+                  "private_ip_address": "172.31.42.134"
+                }
+              ],
+              "source_dest_check": true,
+              "status": "in-use",
+              "subnet_id": "subnet-eeeb21b4",
+              "vpc_id": "vpc-45c79523"
+            }
+          ],
+          "placement": {
+            "availability_zone": "eu-west-1a",
+            "group_name": "",
+            "tenancy": "default"
+          },
+          "private_dns_name": "ip-172-31-42-134.eu-west-1.compute.internal",
+          "private_ip_address": "172.31.42.134",
+          "product_codes": [],
+          "public_dns_name": "ec2-54-75-111-121.eu-west-1.compute.amazonaws.com",
+          "public_ip_address": "54.75.111.121",
+          "root_device_name": "/dev/sda1",
+          "root_device_type": "ebs",
+          "security_groups": [
+            {
+              "group_id": "sg-07cc8221414036714",
+              "group_name": "baas-ssh"
+            },
+            {
+              "group_id": "sg-1976d965",
+              "group_name": "default"
+            },
+            {
+              "group_id": "sg-0995e8ca815a40bc4",
+              "group_name": "baas-dbms"
+            }
+          ],
+          "source_dest_check": true,
+          "state": {
+            "code": 16,
+            "name": "running"
+          },
+          "state_transition_reason": "",
+          "subnet_id": "subnet-eeeb21b4",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "virtualization_type": "hvm",
+          "vpc_id": "vpc-45c79523"
+        }
+      ],
+      "invocation": {
+        "module_args": {
+          "availability_zone": null,
+          "aws_access_key": "benchantkey",
+          "aws_ca_bundle": null,
+          "aws_config": null,
+          "aws_secret_key": "VALUE_SPECIFIED_IN_NO_LOG_PARAMETER",
+          "cpu_credit_specification": null,
+          "cpu_options": null,
+          "debug_botocore_endpoint_logs": false,
+          "detailed_monitoring": null,
+          "ebs_optimized": null,
+          "ec2_url": null,
+          "filters": {
+            "image-id": [
+              "ami-0298c9e0d2c86b0ed"
+            ],
+            "instance-state-name": [
+              "pending",
+              "running",
+              "stopping",
+              "stopped"
+            ],
+            "tag:Name": [
+              "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e"
+            ]
+          },
+          "image": null,
+          "image_id": "ami-0298c9e0d2c86b0ed",
+          "instance_ids": [],
+          "instance_initiated_shutdown_behavior": null,
+          "instance_role": null,
+          "instance_type": "m5.large",
+          "key_name": "baas_dev",
+          "launch_template": null,
+          "name": "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e",
+          "network": {
+            "assign_public_ip": true
+          },
+          "placement_group": null,
+          "profile": null,
+          "purge_tags": false,
+          "region": "eu-west-1",
+          "security_group": null,
+          "security_groups": [
+            "default",
+            "baas-ssh",
+            "baas-dbms"
+          ],
+          "security_token": null,
+          "state": "present",
+          "tags": {
+            "Name": "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e",
+            "service": "baas",
+            "type": "dbms"
+          },
+          "tenancy": null,
+          "termination_protection": null,
+          "tower_callback": null,
+          "user_data": null,
+          "validate_certs": true,
+          "volumes": [
+            {
+              "device_name": "/dev/sda1",
+              "ebs": {
+                "delete_on_termination": true,
+                "volume_size": 100,
+                "volume_type": "gp2"
+              }
+            }
+          ],
+          "vpc_subnet_id": null,
+          "wait": true,
+          "wait_timeout": 600
+        }
+      },
+      "item": 2,
+      "spec": {
+        "BlockDeviceMappings": [
+          {
+            "DeviceName": "/dev/sda1",
+            "Ebs": {
+              "DeleteOnTermination": true,
+              "VolumeSize": 100,
+              "VolumeType": "gp2"
+            }
+          }
+        ],
+        "ClientToken": "2ca2f600e8864a5982d73ebc3fd4e40e",
+        "ImageId": "ami-0298c9e0d2c86b0ed",
+        "InstanceType": "m5.large",
+        "KeyName": "baas_dev",
+        "MaxCount": 1,
+        "MinCount": 1,
+        "NetworkInterfaces": [
+          {
+            "AssociatePublicIpAddress": true,
+            "DeviceIndex": 0,
+            "Groups": [
+              "sg-07cc8221414036714",
+              "sg-0995e8ca815a40bc4",
+              "sg-1976d965"
+            ],
+            "SubnetId": "subnet-eeeb21b4"
+          }
+        ],
+        "TagSpecifications": [
+          {
+            "ResourceType": "volume",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e"
+              }
+            ]
+          },
+          {
+            "ResourceType": "instance",
+            "Tags": [
+              {
+                "Key": "service",
+                "Value": "baas"
+              },
+              {
+                "Key": "type",
+                "Value": "dbms"
+              },
+              {
+                "Key": "Name",
+                "Value": "BaaS-CASSANDRA-data-2-d229b7f1-9d39-5ccc-94be-9ceee757528e"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

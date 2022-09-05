@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "userId": "baas-dev",
+    "projectId": "cassandra-releases",
+    "batchId": "4-batch",
+    "configurationId": "4.0.0",
+    "executions": 2,
+    "executionCounter": 2,
+    "configurationLabel": "4.0.0"
+  },
+  "resourceProvider": {
+    "name": "EC2",
+    "api": "EC2"
+  },
+  "dbmsDeployment": {
+    "dbmsType": "CASSANDRA",
+    "version": "4.0.0",
+    "DBMS": {
+      "dataNodes": {
+        "numberOfNodes": 3,
+        "resource": {
+          "ec2Vm": {
+            "regionName": "eu-west-1",
+            "instanceType": "m5.large",
+            "architecture": "x86_64",
+            "imageDistribution": "ubuntu",
+            "imageVersion": "20.04",
+            "volumeType": "GP2",
+            "volumeSize": 100,
+            "iops": 100
+          },
+          "costs": {
+            "storageCosts": 0.12,
+            "vmCosts": 0.098
+          }
+        },
+        "replicationFactor": 3,
+        "cassandraConfiguration": {
+          "cassandraClientConfiguration": {
+            "writeConsistency": "ONE"
+          }
+        }
+      }
+    },
+    "operationType": "DBMS"
+  },
+  "benchmarkDeployment": {
+    "benchmarkNodes": {
+      "numberOfNodes": 1,
+      "resource": {
+        "ec2Vm": {
+          "regionName": "eu-west-1",
+          "instanceType": "c4.2xlarge",
+          "architecture": "x86_64",
+          "imageDistribution": "ubuntu",
+          "imageVersion": "20.04",
+          "volumeType": "GP2",
+          "volumeSize": 25,
+          "iops": 100
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "id": "iot",
+    "distribution": "YCSB",
+    "version": "0.17.0",
+    "ycsb": {
+      "dbmsEndpoints": [],
+      "workload": {
+        "workloadType": "LOAD",
+        "workloadClass": "site.ycsb.workloads.CoreWorkload",
+        "maxExecutionTime": 1800,
+        "threadCount": 64,
+        "recordCount": 2000000,
+        "insertStart": 2000001,
+        "insertCount": 0,
+        "operations": 10000000,
+        "targetOps": 0,
+        "fieldCount": 10,
+        "fieldLength": 500,
+        "readAllFileds": true,
+        "readModifyWriteProportion": 0,
+        "requestdistribution": "ZIPFIAN",
+        "scanLengthDistribution": "UNIFORM",
+        "insertOrder": "ORDERED",
+        "readProportion": 0.2,
+        "updateProportion": 0.0,
+        "insertProportion": 0.8,
+        "scanProportion": 0.0,
+        "maxScanLength": 1000,
+        "coreWorkloadInsertionRetryLimit": 3,
+        "coreWorkloadInsertionRetryInterval": 3
+      },
+      "executeLoadPhase": true,
+      "executeRunPhase": true
+    }
+  }
+}
